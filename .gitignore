@@ -9,3 +9,4 @@
 .metadata/.log
 .metadata/.mylyn/.tasks.xml.zip
 .metadata/.plugins/org.eclipse.core.resources/.history/12/902b793a2fc700181108b7b532baef62
+*.xmi
