@@ -1,0 +1,51 @@
+package helpTasksMath;
+
+public class Pi implements Type {
+
+	private int n;
+
+	@Override
+	public void getTask(String in) {
+		n = Integer.parseInt(in);
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public String claculate() {
+		int tropfenzahl = n;
+		 double pi = 0;
+		  int innerhalb = 0;
+		  int gesamt = tropfenzahl;
+		  double dotx = 0;
+		  double doty = 0;  
+
+		  while (gesamt > 0) { // generiere Tropfen und addiere je nach Zugehörigkeit
+		    dotx = Math.random();
+		    doty = Math.random();
+
+		    if (dotx*dotx + doty*doty <= 1) {
+		      // Punkt liegt innerhalb des Kreises
+		      innerhalb++;
+		    } else {
+		      // Punkt liegt außerhalb des Kreises
+		    }
+
+		    gesamt--;
+		  }
+
+		  pi = 4*(double)innerhalb/tropfenzahl;
+		  
+		
+		return ""+pi;
+	}
+
+	@Override
+	public String resault() {
+		System.out.println(claculate());
+		return claculate();
+	}
+	
+	
+	
+}

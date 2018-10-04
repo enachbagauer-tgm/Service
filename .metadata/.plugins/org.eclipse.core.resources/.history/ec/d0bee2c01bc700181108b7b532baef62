@@ -1,0 +1,23 @@
+package helpTasksMath;
+
+public class Test {
+	
+	static Pi pi =new Pi();
+	
+	public static void main(String[] args) {
+		pi.getTask("5");
+		pi.resault();
+		
+		pi.getTask("100");
+		pi.resault();
+		
+		pi.getTask("30");
+		pi.resault();
+		
+		pi.getTask("11");
+		pi.resault();
+		
+		pi.getTask("100000000");
+		pi.resault();
+	}
+}

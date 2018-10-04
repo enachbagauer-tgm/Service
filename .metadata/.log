@@ -12,3 +12,8 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.core 2 0 2018-10-03 11:37:58.954
+!MESSAGE Error parsing composite repository
+!SUBENTRY 1 org.eclipse.equinox.p2.core 2 0 2018-10-03 11:37:58.954
+!MESSAGE Error in file:/C:/Users/enach/.p2/org.eclipse.equinox.p2.repository/cache/compositeContent571355601.xml at line 12, column 44: Missing required attribute in "child": location

@@ -1,0 +1,74 @@
+package helpTasksMath;
+
+import java.time.ZonedDateTime;
+import java.time.temporal.ChronoUnit;
+import java.util.concurrent.TimeUnit;
+
+public class Test {
+	
+	static Pi pi =new Pi();
+	static Fibonacci fibo = new Fibonacci();
+	
+	public static void main(String[] args) {
+		testFibo();
+	}
+	
+	public void testPi () {
+		pi.getTask("5");
+		pi.resault();
+		
+		pi.getTask("100");
+		pi.resault();
+		
+		pi.getTask("30");
+		pi.resault();
+		
+		pi.getTask("11");
+		pi.resault();
+		
+		pi.getTask("100000000");
+		pi.resault();
+	}
+	
+	public static void testFibo () {
+		long time = System.nanoTime();
+		
+		fibo.getTask("1");
+		System.out.println("1:"+fibo.resault());
+		System.out.println(TimeUnit.NANOSECONDS.toSeconds(System.nanoTime()-time));
+		
+		fibo.getTask("12");
+		System.out.println("12:"+fibo.resault());
+		System.out.println(TimeUnit.NANOSECONDS.toSeconds(System.nanoTime()-time));
+		
+		fibo.getTask("123");
+		System.out.println("123:"+fibo.resault());
+		System.out.println(TimeUnit.NANOSECONDS.toSeconds(System.nanoTime()-time));
+		
+		fibo.getTask("1234");
+		System.out.println("1234:"+fibo.resault());
+		System.out.println(TimeUnit.NANOSECONDS.toSeconds(System.nanoTime()-time));
+		
+		fibo.getTask("12345");
+		System.out.println("12345:"+fibo.resault());
+		System.out.println(TimeUnit.NANOSECONDS.toSeconds(System.nanoTime()-time));
+		
+		fibo.getTask("123456");
+		System.out.println("123456:"+fibo.resault());
+		System.out.println(TimeUnit.NANOSECONDS.toSeconds(System.nanoTime()-time));
+		
+		fibo.getTask("1234567");
+		System.out.println("1234567:"+fibo.resault());
+		System.out.println(TimeUnit.NANOSECONDS.toSeconds(System.nanoTime()-time));
+		
+		fibo.getTask("12345678");
+		System.out.println("12345678:"+fibo.resault());
+		System.out.println(TimeUnit.NANOSECONDS.toSeconds(System.nanoTime()-time));
+		
+		fibo.getTask("1234567890");
+		System.out.println("1234567890:"+fibo.resault());
+		System.out.println(TimeUnit.NANOSECONDS.toSeconds(System.nanoTime()-time));
+		
+		
+	}
+}

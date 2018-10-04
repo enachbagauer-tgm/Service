@@ -1,0 +1,6 @@
+package helpTasks;
+
+public interface Type {
+	
+	public void pi ();
+}

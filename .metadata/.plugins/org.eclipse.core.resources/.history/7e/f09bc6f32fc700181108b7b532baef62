@@ -1,0 +1,12 @@
+package helpTasksMath;
+
+public interface Type extends Runnable {
+
+
+	public void getTask(String in);
+	
+	String calculate ();
+	
+	public String resault ();
+	
+}

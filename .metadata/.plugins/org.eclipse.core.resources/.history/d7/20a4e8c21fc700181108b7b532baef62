@@ -1,0 +1,45 @@
+package helpTasksMath;
+
+public class Test {
+	
+	static Pi pi =new Pi();
+	static Fibonacci fibo = new Fibonacci();
+	
+	public static void main(String[] args) {
+		testFibo();
+	}
+	
+	public void testPi () {
+		pi.getTask("5");
+		pi.resault();
+		
+		pi.getTask("100");
+		pi.resault();
+		
+		pi.getTask("30");
+		pi.resault();
+		
+		pi.getTask("11");
+		pi.resault();
+		
+		pi.getTask("100000000");
+		pi.resault();
+	}
+	
+	public static void testFibo () {
+		fibo.getTask("5");
+		System.out.println("5:"+fibo.resault());
+		
+		fibo.getTask("2");
+		System.out.println("2:"+fibo.resault());
+		
+		fibo.getTask("8");
+		System.out.println("8:"+fibo.resault());
+		
+		fibo.getTask("100");
+		System.out.println("100:"+fibo.resault());
+		
+		fibo.getTask("88");
+		System.out.println("88:"+fibo.resault());
+	}
+}

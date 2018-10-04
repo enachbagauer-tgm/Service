@@ -1,0 +1,64 @@
+package check;
+
+import helpTasksMath.*;
+
+public class CheckInputString {
+	private String in;
+	private String[] emptyString;
+	private DBConn db;
+
+	public CheckInputString(String in) {
+		db = new DBConn();
+
+		this.in = in;
+		this.in.toLowerCase();
+
+		String[] emptyString = new String[] { " ", "", "\t", "\n" };
+
+	}
+
+	private boolean isEmpty() {
+		if (in.equals("")) {
+			return true;
+		}
+		for (int i = 0; i < emptyString.length; i++) {
+			if (in.equals(emptyString[i].toString())) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	private String[] getCommand() {
+		return in.split(":");
+	}
+
+	public String sort() {
+		Type type = EmptyType();
+
+		String resault = "NA";
+		if (!isEmpty()) {
+			if (db.requestExsits(in)) {
+				return db.sendDBResault();
+			} else {
+				switch (getCommand()[0].toString()) {
+				case "#pi":
+					type = new Pi();
+					break;
+				case "#fibo":
+					type = new Fibonacci();
+
+				default:
+					break;
+				}
+				type.getTask(getCommand()[1]);
+				resault = type.resault();
+			}
+
+		} else {
+			return "Your Input is Empty";
+		}
+		return resault;
+	}
+
+}

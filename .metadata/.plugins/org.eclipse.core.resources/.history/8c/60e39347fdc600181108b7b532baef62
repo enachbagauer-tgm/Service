@@ -1,0 +1,58 @@
+package check;
+
+public class CheckInputString {
+	private String in;
+	private String[] emptyString;
+	private DBConn db;
+
+	public CheckInputString(String in) {
+		db = new DBConn();
+
+		this.in = in;
+		this.in.toLowerCase();
+
+		String[] emptyString = new String[] { " ", "", "\t", "\n" };
+
+	}
+
+	private boolean isEmpty() {
+		if (in.equals("")) {
+			return true;
+		}
+		for (int i = 0; i < emptyString.length; i++) {
+			if (in.equals(emptyString[i].toString())) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	private String getCommand() {
+		return in.split(":")[0].toString();
+	}
+
+	public String sort() {
+
+		String resault = "NA";
+		if (!isEmpty()) {
+			if (db.requestExsits(in)) {
+				return db.sendDBResault();
+			} else {
+				switch (getCommand()) {
+				case "#pi":
+										
+					break;
+
+				default:
+					break;
+				}
+			}
+
+		} else {
+			return "Your Input is Empty";
+		}
+		return resault;
+	}
+	
+	
+}

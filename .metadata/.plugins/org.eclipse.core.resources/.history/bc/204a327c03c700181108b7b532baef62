@@ -1,0 +1,32 @@
+package helpTasksMath;
+
+public class Pi implements Type {
+
+	private int n;
+
+	@Override
+	public void getTask(String in) {
+		n = Integer.parseInt(in);
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public String claculate() {
+		double pi =0;
+		for (int i = 1 ; i <=n; i++ ) {
+			pi+=1/i^2;
+		}
+		pi = Math.sqrt(pi)*6;
+		return ""+pi;
+	}
+
+	@Override
+	public String resault() {
+		System.out.println(claculate());
+		return claculate();
+	}
+	
+	
+	
+}

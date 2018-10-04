@@ -1,0 +1,23 @@
+package helpTasksMath;
+
+public class Fibonacci implements Type {
+
+	@Override
+	public void getTask(String in) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String claculate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String resault() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

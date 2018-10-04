@@ -1,0 +1,43 @@
+package helpTasksMath;
+
+public class Pi implements Type {
+
+	private int n;
+
+	
+
+	
+	//(((-1)^k)/(4*k))*((2/(4*k+1))+(2/(4*k+2))+(1/(4*k+3)));
+	@Override
+	public String calculate() {
+		double pi= 1;
+		for (int k = 1; k<n;k++) {
+			pi =+(1/(16^k)*((8/(8*k+2))+(4/(8*k+3))+(4/8*k+4)-(1/(8*k+7)))) ;
+		}
+		pi = 1/2*pi;
+		return ""+pi;
+	}
+
+	@Override
+	public String resault() {
+		System.out.println(calculate());
+		return calculate();
+	}
+
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void getTask() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
+}

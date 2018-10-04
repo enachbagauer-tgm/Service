@@ -1,0 +1,12 @@
+package helpTasksMath;
+
+public interface Type {
+
+
+	public void getTask(String in);
+	
+	String claculate ();
+	
+	public String resault ();
+	
+}

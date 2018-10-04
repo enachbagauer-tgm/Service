@@ -1,0 +1,13 @@
+package helpTasks;
+
+public interface Type {
+
+	String task = "";
+
+	public void getTask(String in);
+	
+	String claculate ();
+	
+	public String resault ();
+	
+}
